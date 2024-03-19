@@ -14,7 +14,7 @@ function generateTableObject(tableName, guestName, guestSeat){
 }
 
 // funzione per la creazione dell'oggetto contenente i dati relativi agli studenti
-function generateStudentList(studentId, studentName, studentGrades ){
+function generateStudentList(studentId, studentName, studentGrades){
     const Object = {
         Id: studentId,
         Name: studentName,
@@ -37,8 +37,6 @@ console.log('__________________________| 1° Snack |__________________________')
 
 
 const vipTableDOMElement = document.getElementById('vip-table')
-
-console.dir(vipTableDOMElement)
 
 // Array di partenza
 const TavoloVip =  ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
@@ -139,6 +137,7 @@ const studenti = [
     },
 ]
 
+/*
 // Array con i nomi degli studenti in maiuscolo
 const studentsNames = [];
 
@@ -182,5 +181,68 @@ for(let i = 0; i < studenti.length; i++){
 console.log(studentsNames)
 console.log(studentMinGrade)
 console.log(studentMinGradeId)
+*/
 
 
+// Array studenti mappato e ricreato in un nuvo array con il metodo map, e stampato direttamente in HTML
+const studentsNames = studenti.map((el, i, array) => {
+
+    const studentId = el.Id
+    const studentName = el.Name.toUpperCase()
+    const studentGrades = el.Grades
+
+    const allStudents = generateStudentList(studentId, studentName, studentGrades)
+    list1FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
+    list1SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
+    list1ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
+
+    return allStudents
+})
+
+console.log(studentsNames)
+
+
+// Array studenti filtrato in un nuovo Array utilizzando il metodo filter con una scrittura estesa
+const studentMinGrade = studenti.filter((el, i, array) =>{
+    if(el.Grades > 70)
+    return true
+})
+
+// ciclo for per la stampa in HTML
+for(let i = 0; i < studentMinGrade.length; i++){
+
+    const el = studentMinGrade[i]
+
+    const studentId = el.Id
+    const studentName = el.Name.toUpperCase()
+    const studentGrades = el.Grades
+
+
+    list2FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
+    list2SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
+    list2ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
+}
+console.log(studentMinGrade)
+
+
+
+
+
+// Array studenti filtrato in un nuovo Array utilizzando il metodo filter con una scrittura abbreviata
+const studentMinGradeId = studenti.filter((el) => el.Grades > 70 && el.Id > 120)
+
+// ciclo for per la stampa in HTML
+for(let i = 0; i < studentMinGradeId.length; i++){
+
+    const el = studentMinGradeId[i]
+
+    const studentId = el.Id
+    const studentName = el.Name.toUpperCase()
+    const studentGrades = el.Grades
+
+
+    list3FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
+    list3SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
+    list3ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
+}
+console.log(studentMinGradeId)
