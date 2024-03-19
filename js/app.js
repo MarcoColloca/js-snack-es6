@@ -2,6 +2,7 @@ console.log('JS Test')
 
 /// ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ Mie Funzioni ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ \\\
 
+
 // funzione per la creazione dell'oggetto contenente i dati relativi al vip
 function generateTableObject(tableName, guestName, guestSeat){
     const Object = {
@@ -28,15 +29,17 @@ console.log('__________________________| 1° Snack |__________________________')
 const TavoloVip =  ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
 
 
+const TavoloVipStampa = [];
+
 // ciclo for che consete dato l'array, di stampare un oggetto contenente i dati richiesti
 for(i = 0; i < TavoloVip.length; i++){
     const vip = TavoloVip[i]
     const posto = TavoloVip.indexOf(vip) + 1
 
     const vipInfo = generateTableObject('Tavolo Vip', vip, posto)
-    console.log(vipInfo)
+    TavoloVipStampa.push(vipInfo)
 }
-
+console.log(TavoloVipStampa)
 
 
 
@@ -51,6 +54,10 @@ for(i = 0; i < TavoloVip.length; i++){
 console.log(' ')
 console.log(' ')
 console.log('__________________________| 2° Snack |__________________________')
+
+
+const studentListDOMElement = document.querySelector('.student-list')
+
 
 
 // Array degli studenti
@@ -101,7 +108,7 @@ const studentMinGradeId = [];
 
 
 
-for(i = 0; i < studenti.length; i++){
+for(let i = 0; i < studenti.length; i++){
 
     const studentName = studenti[i].Name.toUpperCase()
     studentsNames.push(studentName)
@@ -120,4 +127,3 @@ console.log(studentMinGrade)
 console.log(studentMinGradeId)
 
 
-const studentListDOMElement = document.querySelector('.student-list')
