@@ -40,3 +40,15 @@ ol p{
 .consegna{
     display: none;
 }
+
+.snack p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: rgb(36, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.snack h2{
+    margin-top: 80px;
+    margin-bottom: 10px;
+}

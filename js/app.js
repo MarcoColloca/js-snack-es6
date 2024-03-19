@@ -69,7 +69,19 @@ console.log(' ')
 console.log('__________________________| 2° Snack |__________________________')
 
 
-const studentListDOMElement = document.querySelector('.student-list')
+
+const list1FirstColDOMElement = document.querySelector('.student-list #first-col')
+const list1SecondColDOMElement = document.querySelector('.student-list #second-col')
+const list1ThirdColDOMElement = document.querySelector('.student-list #third-col')
+
+
+const list2FirstColDOMElement = document.querySelector('.student-list-2 #first-col')
+const list2SecondColDOMElement = document.querySelector('.student-list-2 #second-col')
+const list2ThirdColDOMElement = document.querySelector('.student-list-2 #third-col')
+
+const list3FirstColDOMElement = document.querySelector('.student-list-3 #first-col')
+const list3SecondColDOMElement = document.querySelector('.student-list-3 #second-col')
+const list3ThirdColDOMElement = document.querySelector('.student-list-3 #third-col')
 
 
 
@@ -135,10 +147,21 @@ for(let i = 0; i < studenti.length; i++){
     studentsNames.push(studentInfo)
     if(studenti[i].Grades > 70 && studenti[i].Id > 120){
         studentMinGradeId.push(studentInfo)
-    }else if (studenti[i].Grades > 70){
-        studentMinGrade.push(studentInfo)
+        list3FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
+        list3SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
+        list3ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
     }
     
+    if (studenti[i].Grades > 70){
+        studentMinGrade.push(studentInfo)
+        list2FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
+        list2SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
+        list2ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
+    }
+    
+    list1FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
+    list1SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
+    list1ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
 }
 
 console.log(studentsNames)
