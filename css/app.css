@@ -35,3 +35,8 @@ ol p{
 .col-4{
     width: calc(100%/12*4);
 }
+
+
+.consegna{
+    display: none;
+}
