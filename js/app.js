@@ -187,19 +187,22 @@ console.log(studentMinGradeId)
 // Array studenti mappato e ricreato in un nuvo array con il metodo map, e stampato direttamente in HTML
 const studentsNames = studenti.map((el, i, array) => {
 
-    const studentId = el.Id
-    const studentName = el.Name.toUpperCase()
-    const studentGrades = el.Grades
-
-    const allStudents = generateStudentList(studentId, studentName, studentGrades)
-    list1FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
-    list1SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
-    list1ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
+    const allStudents = generateStudentList(el.Id, el.Name.toUpperCase(), el.Grades)
 
     return allStudents
 })
-
+console.log('Students Names Array:')
 console.log(studentsNames)
+
+// ciclo for each per la stampa in console
+studentsNames.forEach((el) => {
+
+    list1FirstColDOMElement.innerHTML += `<p>${el.Id}</p>`
+    list1SecondColDOMElement.innerHTML += `<p>${el.Name}</p>`
+    list1ThirdColDOMElement.innerHTML += `<p>${el.Grades}</p>`
+
+})
+
 
 
 // Array studenti filtrato in un nuovo Array utilizzando il metodo filter con una scrittura estesa
@@ -221,7 +224,10 @@ for(let i = 0; i < studentMinGrade.length; i++){
     list2FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
     list2SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
     list2ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
+
 }
+console.log(' ')
+console.log('Students Minimun Grade Array:')
 console.log(studentMinGrade)
 
 
@@ -244,5 +250,8 @@ for(let i = 0; i < studentMinGradeId.length; i++){
     list3FirstColDOMElement.innerHTML += `<p>${studentId}</p>`
     list3SecondColDOMElement.innerHTML += `<p>${studentName}</p>`
     list3ThirdColDOMElement.innerHTML += `<p>${studentGrades}</p>`
+
 }
+console.log(' ')
+console.log('Students Minimun Grade & Id Array:')
 console.log(studentMinGradeId)
