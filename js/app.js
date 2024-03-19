@@ -13,6 +13,15 @@ function generateTableObject(tableName, guestName, guestSeat){
     return Object
 }
 
+// funzione per la creazione dell'oggetto contenente i dati relativi agli studenti
+function generateStudentList(studentId, studentName, studentGrades ){
+    const Object = {
+        Id: studentId,
+        Name: studentName,
+        Grades: studentGrades
+    }
+    return Object
+}
 
 /// ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ Mie Funzioni ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ \\\
 
@@ -114,16 +123,20 @@ const studentMinGradeId = [];
 
 for(let i = 0; i < studenti.length; i++){
 
+    const studentId = studenti[i].Id
     const studentName = studenti[i].Name.toUpperCase()
-    studentsNames.push(studentName)
+    const studentGrades = studenti[i].Grades
 
-    if(studenti[i].Grades > 70){
-        studentMinGrade.push(studenti[i])
+    
+    const studentInfo = generateStudentList(studentId, studentName, studentGrades)
+
+    studentsNames.push(studentInfo)
+    if(studenti[i].Grades > 70 && studenti[i].Id > 120){
+        studentMinGradeId.push(studentInfo)
+    }else if (studenti[i].Grades > 70){
+        studentMinGrade.push(studentInfo)
     }
     
-    if ((studenti[i].Grades > 70 && studenti[i].Id > 120)){
-        studentMinGradeId.push(studenti[i])
-    }
 }
 
 console.log(studentsNames)
@@ -131,3 +144,10 @@ console.log(studentMinGrade)
 console.log(studentMinGradeId)
 
 
+// if(studenti[i].Grades > 70){
+//     studentMinGrade.push(studenti[i])
+// }
+
+// if ((studenti[i].Grades > 70 && studenti[i].Id > 120)){
+//     studentMinGradeId.push(studenti[i])
+// }
