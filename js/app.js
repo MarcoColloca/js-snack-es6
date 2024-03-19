@@ -112,15 +112,17 @@ const studenti = [
     },
 ]
 
-
+// Array con i nomi degli studenti in maiuscolo
 const studentsNames = [];
 
+// Array con la lista degli studenti che hanno un voto minimo
 const studentMinGrade = [];
 
+// Array con la lista degli studenti che hanno sia un voto che un Id minimo
 const studentMinGradeId = [];
 
 
-
+// ciclo for che permette la creazione degli array (navigando i dati dell'Array iniziale)
 for(let i = 0; i < studenti.length; i++){
 
     const studentId = studenti[i].Id
@@ -144,10 +146,3 @@ console.log(studentMinGrade)
 console.log(studentMinGradeId)
 
 
-// if(studenti[i].Grades > 70){
-//     studentMinGrade.push(studenti[i])
-// }
-
-// if ((studenti[i].Grades > 70 && studenti[i].Id > 120)){
-//     studentMinGradeId.push(studenti[i])
-// }
