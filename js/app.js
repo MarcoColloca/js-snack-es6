@@ -34,6 +34,12 @@ console.log(' ')
 console.log('__________________________| 1° Snack |__________________________')
 
 
+
+
+const vipTableDOMElement = document.getElementById('vip-table')
+
+console.dir(vipTableDOMElement)
+
 // Array di partenza
 const TavoloVip =  ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
 console.log('Array Tavolo Vip:')
@@ -51,6 +57,15 @@ for(i = 0; i < TavoloVip.length; i++){
 
     const vipInfo = generateTableObject('Tavolo Vip', vip, posto)
     TavoloVipStampa.push(vipInfo)
+
+    vipTableDOMElement.innerHTML += 
+    `
+    <tr>
+        <th scope="row"> Tavolo Vip</th>
+        <td>${vip}</td>
+        <td>${posto}</td>
+    </tr>
+    ` 
 }
 console.log(TavoloVipStampa)
 
