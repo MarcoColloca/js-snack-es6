@@ -59,7 +59,7 @@ for(i = 0; i < TavoloVip.length; i++){
     vipTableDOMElement.innerHTML += 
     `
     <tr>
-        <th scope="row"> Tavolo Vip</th>
+        <td scope="row"> Tavolo Vip</th>
         <td>${vip}</td>
         <td>${posto}</td>
     </tr>
