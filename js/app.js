@@ -27,8 +27,12 @@ console.log('__________________________| 1° Snack |__________________________')
 
 // Array di partenza
 const TavoloVip =  ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
+console.log('Array Tavolo Vip:')
+console.log(TavoloVip)
 
+console.log(' ')
 
+console.log('Array Tavolo Vip per la Stampa:')
 const TavoloVipStampa = [];
 
 // ciclo for che consete dato l'array, di stampare un oggetto contenente i dati richiesti
