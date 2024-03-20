@@ -338,40 +338,24 @@ console.log(
 
 
 
-// Qui sotto l'esercizio svolto con il ciclo for (incompleto, poichè non capivo il senso di utilizzare il template literal qua)
+// Qui sotto l'esercizio svolto con il ciclo for
 /*
-//let myBikeWeight = Infinity
-//let myBikeName = ''
 
-for(i = 0; i < racingBikes.length; i++){
+let lightestBikeFound = racingBikes[0]
 
-    
-    let bikeWeight = racingBikes[i].bikeWeight
-    let bikeName = racingBikes[i].bikeName
+for(let i = 1; i < racingBikes.length; i++){
 
-    if(bikeWeight < myBikeWeight){
-        myBikeWeight = bikeWeight
-        mymyBikeName = bikeName
+    const currentElement = racingBikes[i]
+
+    if(currentElement.bikeWeight < lightestBikeFound.bikeWeight){
+        lightestBikeFound = currentElement
     }
-    
 }
 
+const {bikeName, bikeWeight} = lightestBikeFound
 
+console.log(`La bici che pesa meno di tutte è ${bikeName} che pesa ${bikeWeight} kg`)
 
-
-console.log('Stampa in Console con il Template Literal')
-console.log(
-    `
-    {
-        bikeName: ${myBikeName},
-        bikeWeight: ${myBikeWeight}
-    },
-    `
-)
-console.log(' ')
-
-
-console.log(myBikeWeight);
 */
 
 
