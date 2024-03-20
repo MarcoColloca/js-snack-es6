@@ -315,20 +315,51 @@ console.log('Array Bici da Corsa')
 console.log(racingBikes)
 console.log(' ')
 
+// ordinamento dell'array in base al peso tramite il metodo sort
+racingBikes.sort((a, b) => a.bikeWeight - b.bikeWeight);
+
+// destrutturazione del primo oggetto dell'Array racingBikes (grazie al sort sarà sempre la bici con il peso minore)
+const {bikeName, bikeWeight} = racingBikes[0]
+
+// creazione del mio oggetto da stampare
+const myBike = {
+    bikeName,
+    bikeWeight
+}
+
+// stampa in console tramite tamplate literal
+console.log(
+    `
+    {
+        bikeName:${myBike.bikeName}
+        bikeWeight:${myBike.bikeWeight}
+    },
+    `
+)
 
 
-let myBikeWeight = 999
-let myBikeName = ''
+
+
+
+/*
+//let myBikeWeight = 999
+//let myBikeName = ''
 
 for(i = 0; i < racingBikes.length; i++){
 
+    let comparisonWeight = 999
     let bikeWeight = racingBikes[i].bikeWeight
     let bikeName = racingBikes[i].bikeName
 
-    if(racingBikes[i].bikeWeight < myBikeWeight){
-        myBikeWeight = bikeWeight
-        myBikeName = bikeName
+    
+    const {bikeName:ciao, bikeWeight:no} = racingBikes
+
+
+    const myBike = {
+        ciao,
+        bikeWeight
     }
+    console.log(myBike)
 }
 
 
@@ -347,3 +378,4 @@ console.log(' ')
 
 
 console.log(myBikeWeight);
+*/
