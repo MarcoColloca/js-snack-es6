@@ -110,9 +110,21 @@ tbody > tr:nth-of-type(odd) {
     justify-content: center;
 }
 
-.football-team > p {
-    background-color: green;
+.football-team p {
+    background-color: rgb(186, 255, 186);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 5px 0;
+    font-weight: bolder;
+    margin: 0;
 }
+
+.football-team h3 {
+    background-color: rgb(186, 255, 186);
+    color: black;
+    margin-bottom: 0;
+    border: 1px solid black;
+
+}
+
