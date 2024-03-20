@@ -23,6 +23,15 @@ function generateStudentList(studentId, studentName, studentGrades){
     return Object
 }
 
+
+function getRandomInt(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
+  
+
+
 /// ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ Mie Funzioni ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ \\\
 
 
@@ -369,3 +378,46 @@ console.log(`La bici che pesa meno di tutte è ${bikeName} che pesa ${bikeWeight
 console.log(' ')
 console.log(' ')
 console.log('__________________________| 4° Snack |__________________________')
+
+const footballTeams = [
+    {
+        TeamName: 'Atalanta',
+        TeamPoints: 0,
+        TeamFouls: 0
+    },
+    {
+        TeamName: 'Bologna',
+        TeamPoints: 0,
+        TeamFouls: 0
+    },
+    {
+        TeamName: 'Inter',
+        TeamPoints: 0,
+        TeamFouls: 0
+    },
+    {
+        TeamName: 'Juventus',
+        TeamPoints: 0,
+        TeamFouls: 0
+    },
+    {
+        TeamName: 'Milan',
+        TeamPoints: 0,
+        TeamFouls: 0
+    },
+    {
+        TeamName: 'Roma',
+        TeamPoints: 0,
+        TeamFouls: 0
+    },
+]
+
+
+
+footballTeams.forEach((FootballTeam) => {
+    FootballTeam.TeamPoints = getRandomInt(0, 100);
+    FootballTeam.TeamFouls = getRandomInt(0, 30);
+})
+
+
+console.log(footballTeams)
