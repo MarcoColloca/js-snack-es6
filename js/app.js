@@ -351,24 +351,20 @@ console.log(
 
 // Qui sotto l'esercizio svolto con il ciclo for (incompleto, poichè non capivo il senso di utilizzare il template literal qua)
 /*
-//let myBikeWeight = 999
+//let myBikeWeight = Infinity
 //let myBikeName = ''
 
 for(i = 0; i < racingBikes.length; i++){
 
-    let comparisonWeight = 999
+    
     let bikeWeight = racingBikes[i].bikeWeight
     let bikeName = racingBikes[i].bikeName
 
-    
-    const {bikeName:ciao, bikeWeight:no} = racingBikes
-
-
-    const myBike = {
-        ciao,
-        bikeWeight
+    if(bikeWeight < myBikeWeight){
+        myBikeWeight = bikeWeight
+        mymyBikeName = bikeName
     }
-    console.log(myBike)
+    
 }
 
 
