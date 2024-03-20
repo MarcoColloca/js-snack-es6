@@ -311,7 +311,7 @@ const racingBikes = [
     },
     {
         bikeName: 'Test Finale',
-        bikeWeight: 1
+        bikeWeight: 1.11
     }
 
 ]
@@ -325,24 +325,13 @@ racingBikes.sort((a, b) => a.bikeWeight - b.bikeWeight);
 // destrutturazione del primo oggetto dell'Array racingBikes (grazie al sort sarà sempre la bici con il peso minore)
 const {bikeName, bikeWeight} = racingBikes[0]
 
-// creazione del mio oggetto da stampare
-const myBike = {
-    bikeName,
-    bikeWeight
-}
-console.log('Oggetto destrutturato e ricostruito da Stampare')
-console.log(myBike)
-console.log(' ')
-
 
 
 // stampa in console tramite tamplate literal
 console.log(
     `
-    {
-        bikeName: ${myBike.bikeName},
-        bikeWeight: ${myBike.bikeWeight} kg
-    },
+    Our Lighest Bike is: ${bikeName}, 
+    with a weight of ${bikeWeight} kg.
     `
 )
 
