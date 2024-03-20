@@ -309,9 +309,13 @@ const racingBikes = [
         bikeName: 'Fuji Bikes SL',
         bikeWeight: 8.5, 
     },
+    {
+        bikeName: 'Test Finale',
+        bikeWeight: 1
+    }
 
 ]
-console.log('Array Bici da Corsa')
+console.log('Array Bici da Corsa, con ordine mutato dal metodo sort')
 console.log(racingBikes)
 console.log(' ')
 
@@ -331,8 +335,8 @@ const myBike = {
 console.log(
     `
     {
-        bikeName:${myBike.bikeName}
-        bikeWeight:${myBike.bikeWeight}
+        bikeName: ${myBike.bikeName},
+        bikeWeight: ${myBike.bikeWeight} kg
     },
     `
 )
