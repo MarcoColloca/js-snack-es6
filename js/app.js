@@ -379,6 +379,7 @@ console.log(' ')
 console.log(' ')
 console.log('__________________________| 4° Snack |__________________________')
 
+// Array di Squadre di calcio
 const footballTeams = [
     {
         TeamName: 'Atalanta',
@@ -413,11 +414,30 @@ const footballTeams = [
 ]
 
 
-
+// Assegnazione tramite ciclo forEach di punteggio e falli subiti
 footballTeams.forEach((FootballTeam) => {
     FootballTeam.TeamPoints = getRandomInt(0, 100);
     FootballTeam.TeamFouls = getRandomInt(0, 30);
 })
-
-
+console.log('Array delle Square di Calcio con Nome, Punti e Falli')
 console.log(footballTeams)
+console.log(' ')
+
+
+// metodo map utilizzato per andare a controllare l'array originale e ricreare un nuovo array con gli elementi richiesti
+const newTeamArray = footballTeams.map((el) => {
+    // destrutturazione dell'elemento corrente
+    const {TeamName, TeamFouls} = el
+
+    // assegnazione delle info destrutturate ad una variabile da poi ritornare
+    const teamInfo = {TeamName, TeamFouls}
+
+    //ritorno della variabile
+    return teamInfo
+})
+
+console.log('Array delle Square di Calcio Filtrato con Nome  e Falli')
+console.log(newTeamArray)
+console.log(' ')
+
+
