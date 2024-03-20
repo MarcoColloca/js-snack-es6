@@ -344,7 +344,7 @@ console.log(
 
 
 
-
+// Qui sotto l'esercizio svolto con il ciclo for (incompleto, poichè non capivo il senso di utilizzare il template literal qua)
 /*
 //let myBikeWeight = 999
 //let myBikeName = ''
@@ -383,3 +383,15 @@ console.log(' ')
 
 console.log(myBikeWeight);
 */
+
+
+
+
+
+
+
+
+/////////// 4° Snack 
+console.log(' ')
+console.log(' ')
+console.log('__________________________| 4° Snack |__________________________')
