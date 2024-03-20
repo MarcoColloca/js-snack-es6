@@ -348,7 +348,7 @@ console.log(
     `
 )
 
-
+// Stampa in HTML dellla bici da corsa più leggera con nome e relativo peso evidenziati.
 myBikeDOMElement.innerHTML =  `Our Lighest Bike is: <span style="color: brown;"> ${bikeName} </span>, with a weight of <span style="color: brown;">${bikeWeight} kg</span>.`
 
 
@@ -384,6 +384,15 @@ console.log(`La bici che pesa meno di tutte è ${bikeName} che pesa ${bikeWeight
 console.log(' ')
 console.log(' ')
 console.log('__________________________| 4° Snack |__________________________')
+
+
+
+const footballFirstColDOMElement = document.querySelector('.football-team #first-col')
+const footballSecondColDOMElement = document.querySelector('.football-team #second-col')
+
+
+
+
 
 // Array di Squadre di calcio
 const footballTeams = [
@@ -446,4 +455,10 @@ console.log('Array delle Square di Calcio Filtrato con Nome  e Falli')
 console.log(newTeamArray)
 console.log(' ')
 
+// Ciclo for Each per stampare gli elementi in console, basandomi sul nuovo Array
+newTeamArray.forEach((el) => {
 
+    footballFirstColDOMElement.innerHTML += `<p>${el.TeamName}</p>`
+    footballSecondColDOMElement.innerHTML += `<p>${el.TeamFouls}</p>`
+
+})

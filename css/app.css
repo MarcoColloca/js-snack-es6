@@ -98,5 +98,21 @@ tbody > tr:nth-of-type(odd) {
 
 #my-bike{
     font-size: 30px;
-    margin-top: 50px;
+    margin-top: 80px;
+}
+
+
+.football-snack{
+    text-align: center;
+}
+
+.football-team.flex-box{
+    justify-content: center;
+}
+
+.football-team > p {
+    background-color: green;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: rgb(255, 255, 255);
 }
