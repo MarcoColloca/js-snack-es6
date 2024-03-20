@@ -330,6 +330,11 @@ const myBike = {
     bikeName,
     bikeWeight
 }
+console.log('Oggetto destrutturato e ricostruito da Stampare')
+console.log(myBike)
+console.log(' ')
+
+
 
 // stampa in console tramite tamplate literal
 console.log(
