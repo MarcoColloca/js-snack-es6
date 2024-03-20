@@ -255,3 +255,19 @@ for(let i = 0; i < studentMinGradeId.length; i++){
 console.log(' ')
 console.log('Students Minimun Grade & Id Array:')
 console.log(studentMinGradeId)
+
+
+
+
+
+
+
+
+
+
+
+
+/////////// 3° Snack 
+console.log(' ')
+console.log(' ')
+console.log('__________________________| 3° Snack |__________________________')
