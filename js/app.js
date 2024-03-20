@@ -271,3 +271,43 @@ console.log(studentMinGradeId)
 console.log(' ')
 console.log(' ')
 console.log('__________________________| 3° Snack |__________________________')
+
+const racingBikes = [
+    {
+        bikeName: 'Drali Darsena',
+        bikeWeight: 10, 
+    },
+    {
+        bikeName: 'BH Ultralight EVO Disc',
+        bikeWeight: 8.2, 
+    },
+    {
+        bikeName: 'Canyon Ultimate',
+        bikeWeight: 7.6, 
+    },
+    {
+        bikeName: 'Carrera SL7',
+        bikeWeight: 9.4, 
+    },
+    {
+        bikeName: 'Coluer Radar',
+        bikeWeight: 10.5, 
+    },
+    {
+        bikeName: 'De Rosa Merak',
+        bikeWeight: 10.2, 
+    },
+    {
+        bikeName: 'Alchemy Atlas',
+        bikeWeight: 6.8, 
+    },
+    {
+        bikeName: 'Exept AllRoad',
+        bikeWeight: 11, 
+    },
+    {
+        bikeName: 'Fuji Bikes SL',
+        bikeWeight: 8.5, 
+    },
+
+]
