@@ -90,3 +90,13 @@ tbody > tr:nth-of-type(even) {
 tbody > tr:nth-of-type(odd) {
     background-color: darkslategrey
 }
+
+.bikes-section{
+    text-align: center;
+}
+
+
+#my-bike{
+    font-size: 30px;
+    margin-top: 50px;
+}

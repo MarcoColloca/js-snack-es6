@@ -281,6 +281,10 @@ console.log(' ')
 console.log(' ')
 console.log('__________________________| 3° Snack |__________________________')
 
+
+const myBikeDOMElement = document.getElementById('my-bike')
+
+
 const racingBikes = [
     {
         bikeName: 'Drali Darsena',
@@ -344,6 +348,8 @@ console.log(
     `
 )
 
+
+myBikeDOMElement.innerHTML =  `Our Lighest Bike is: <span style="color: brown;"> ${bikeName} </span>, with a weight of <span style="color: brown;">${bikeWeight} kg</span>.`
 
 
 
