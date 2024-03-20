@@ -311,3 +311,39 @@ const racingBikes = [
     },
 
 ]
+console.log('Array Bici da Corsa')
+console.log(racingBikes)
+console.log(' ')
+
+
+
+let myBikeWeight = 999
+let myBikeName = ''
+
+for(i = 0; i < racingBikes.length; i++){
+
+    let bikeWeight = racingBikes[i].bikeWeight
+    let bikeName = racingBikes[i].bikeName
+
+    if(racingBikes[i].bikeWeight < myBikeWeight){
+        myBikeWeight = bikeWeight
+        myBikeName = bikeName
+    }
+}
+
+
+
+
+console.log('Stampa in Console con il Template Literal')
+console.log(
+    `
+    {
+        bikeName: ${myBikeName},
+        bikeWeight: ${myBikeWeight}
+    },
+    `
+)
+console.log(' ')
+
+
+console.log(myBikeWeight);
