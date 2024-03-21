@@ -341,6 +341,7 @@ const {bikeName, bikeWeight} = racingBikes[0]
 
 
 // stampa in console tramite tamplate literal
+console.log('Stampa in console della Bici più leggera.')
 console.log(
     `
     Our Lighest Bike is: ${bikeName}, 
