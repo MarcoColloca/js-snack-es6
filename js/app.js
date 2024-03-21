@@ -328,15 +328,21 @@ const racingBikes = [
     }
 
 ]
-console.log('Array Bici da Corsa, con ordine mutato dal metodo sort')
+console.log('Array Bici da Corsa')
 console.log(racingBikes)
 console.log(' ')
 
 // ordinamento dell'array in base al peso tramite il metodo sort
-racingBikes.sort((a, b) => a.bikeWeight - b.bikeWeight);
+const sortedBikes = racingBikes.toSorted((a, b) => a.bikeWeight - b.bikeWeight);
+
+console.log('Array Bici da Corsa, con ordine mutato dal metodo sort')
+console.log(sortedBikes)
+console.log(' ')
+
+
 
 // destrutturazione del primo oggetto dell'Array racingBikes (grazie al sort sarà sempre la bici con il peso minore)
-const {bikeName, bikeWeight} = racingBikes[0]
+const {bikeName, bikeWeight} = sortedBikes[0]
 
 
 
